@@ -171,7 +171,7 @@ ClassList.prototype.toggle = function (token, force) {
 };
 
 /* https://github.com/WICG/focus-ring */
-document.addEventListener('DOMContentLoaded', function() {
+var init = function() {
   var hadKeyboardEvent = false;
   var keyboardThrottleTimeoutID = 0;
   var elWithFocusRing;
@@ -300,6 +300,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.addEventListener('focus', onFocus, true);
   document.body.addEventListener('blur', onBlur, true);
   window.addEventListener('focus', onWindowFocus, true);
-});
+};
+
+init();
 
 })));
